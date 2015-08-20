@@ -68,7 +68,7 @@
 		</dependency>
 	</dependencies>
 	<properties>
-		<async-http-client.version>1.7.4</async-http-client.version>
+		<async-http-client.version>1.9.30</async-http-client.version>
 		<gson.version>2.2.2</gson.version>
 		<junit.version>4.10</junit.version>
 	</properties>
