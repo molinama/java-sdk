@@ -173,21 +173,18 @@ public class Meli {
 		return response;
 	}
 
-        public void refreshAccessToken() throws AuthorizationFailure {
-                    FluentStringsMap params = new FluentStringsMap();
-                    params.add("grant_type", "refresh_token");
-                    params.add("client_id", String.valueOf(this.clientId));
-                    params.add("client_secret", this.clientSecret);
-                    params.add("refresh_token", this.refreshToken);
-                    try {
-                        BoundRequestBuilder req = preparePost("/oauth/token", params);
-                        parseToken(req);
-                    } catch (AuthorizationFailure e1) {
-                        System.out.println(e1.getMessage());
-                    }catch (Exception e){
-                        System.out.println(e.getMessage());
-                    }
-
+    public void refreshAccessToken() throws AuthorizationFailure {
+            FluentStringsMap params = new FluentStringsMap();
+            params.add("grant_type", "refresh_token");
+            params.add("client_id", String.valueOf(this.clientId));
+            params.add("client_secret", this.clientSecret);
+            params.add("refresh_token", this.refreshToken);
+            try {
+                BoundRequestBuilder req = preparePost("/oauth/token", params);
+                parseToken(req);
+            } catch (Exception e){
+                throw new AuthorizationFailure(e);
+            }
         }
 
         /**
@@ -274,10 +271,6 @@ public class Meli {
                     }
 
             }
-
-        private boolean hasRefreshToken() {
-            return this.refreshToken != null && !this.refreshToken.isEmpty();
-        }
 
 	public Response post(String path, FluentStringsMap params, String body) throws MeliException {
 
