@@ -6,7 +6,7 @@
 	<artifactId>MercadoLibreJavaSdk</artifactId>
 	<name>Mercadolibre Java SDK</name>
 	<version>0.0.3-SNAPSHOT</version>
-	<distributionManagement>
+	<!-- distributionManagement>
 		<repository>
 			<id>repo</id>
 			<url>https://github.com/mercadolibre/java-sdk-repo/raw/master/releases</url>
@@ -15,7 +15,7 @@
 			<id>snapshot-repo</id>
 			<url>https://github.com/mercadolibre/java-sdk-repo/raw/master/snapshots</url>
 		</snapshotRepository>
-	</distributionManagement>
+	</distributionManagement-->
 
 	<build>
 		<plugins>
