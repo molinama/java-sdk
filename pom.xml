@@ -5,7 +5,7 @@
 	<groupId>com.mercadolibre</groupId>
 	<artifactId>MercadoLibreJavaSdk</artifactId>
 	<name>Mercadolibre Java SDK</name>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.3</version>
 	<!-- distributionManagement>
 		<repository>
 			<id>repo</id>
